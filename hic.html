@@ -56,19 +56,11 @@
 
 </div>
 
+<script type="text/javascript" src="site/js/combobox.js"></script>
 <script type="text/javascript">
-
     $(document).ready(function () {
-
-        var browser = hic.createBrowser($('#app-container'), {});
-
-        $('#dataset_selector').on('change', function(e){
-            browser.loadHicFile({ url: $(this).val() });
-        });
-
         hic.initSite();
     });
-
 </script>
 
 </body>
