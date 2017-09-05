@@ -126,8 +126,9 @@ var hic = (function (hic) {
 
 
         // Widget container
-        id = browser.id + '_' + 'hic-nav-bar-widget-container';
-        $div = $("<div>", { id:id });
+        // id = browser.id + '_' + 'hic-nav-bar-widget-container';
+        // $div = $("<div>", { id:id });
+        $div = $("<div>", { class:'hic-nav-bar-widget-container' });
 
         if (true === browser.config.miniMode) {
             $div.addClass('hic-nav-bar-mini-mode-widget-container');

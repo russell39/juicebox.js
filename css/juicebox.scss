@@ -448,6 +448,8 @@ $default-font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
 
+  z-index: 256;
+
   .hic-annotation-modal-row {
 
     display:flex;
@@ -621,8 +623,8 @@ $default-font-family: 'Open Sans', sans-serif;
 
   }
 
-  // nav-bar widgets
-  div[id$="hic-nav-bar-widget-container"] {
+  // navbar widget container
+  .hic-nav-bar-widget-container {
     display:flex;
     flex-flow: row;
     flex-wrap: nowrap;
@@ -797,7 +799,7 @@ div[id$="x-track-container"] {
         overflow: hidden;
         text-overflow: ellipsis;
 
-        z-index: 512;
+        //z-index: 512;
       }
 
       // x-track spinner container
@@ -1014,7 +1016,7 @@ div[id$="content-container"] {
         height: $hic-viewport-spinner-size;
         width: $hic-viewport-spinner-size;
 
-        z-index: 512;
+        //z-index: 512;
 
         pointer-events:none;
 
