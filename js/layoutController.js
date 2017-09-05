@@ -33,7 +33,7 @@ var hic = (function (hic) {
     hic.LayoutController.nav_bar_label_height = 28;
     hic.LayoutController.nav_bar_widget_container_height = 28;
     hic.LayoutController.nav_bar_shim_height = 8;
-    hic.LayoutController.nav_bar_height = hic.LayoutController.nav_bar_label_height + hic.LayoutController.nav_bar_widget_container_height + hic.LayoutController.nav_bar_shim_height;
+    hic.LayoutController.nav_bar_height = hic.LayoutController.nav_bar_label_height + (2 * hic.LayoutController.nav_bar_widget_container_height) + hic.LayoutController.nav_bar_shim_height;
 
     function createNavBar(browser, $root) {
 
