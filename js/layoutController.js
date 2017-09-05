@@ -118,30 +118,26 @@ var hic = (function (hic) {
 
 
 
-
-
-
-
-
-
-
-        // Widget container
-        // id = browser.id + '_' + 'hic-nav-bar-widget-container';
-        // $div = $("<div>", { id:id });
+        // upper widget container
         $div = $("<div>", { class:'hic-nav-bar-widget-container' });
 
-        if (true === browser.config.miniMode) {
-            $div.addClass('hic-nav-bar-mini-mode-widget-container');
-        }
+        // if (true === browser.config.miniMode) {
+        //     $div.addClass('hic-nav-bar-mini-mode-widget-container');
+        // }
 
         $navbar_container.append($div);
 
         // location box / goto
         browser.locusGoto = new hic.LocusGoto(browser, $div);
 
-        if (false === browser.config.showLocusGoto) {
-            browser.locusGoto.$container.hide();
-        }
+        // if (false === browser.config.showLocusGoto) {
+        //     browser.locusGoto.$container.hide();
+        // }
+
+
+        // lower widget container
+        $div = $("<div>", { class:'hic-nav-bar-widget-container' });
+        $navbar_container.append($div);
 
         // colorscale widget
         browser.colorscaleWidget = new hic.ColorScaleWidget(browser, $div);

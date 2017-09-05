@@ -3,7 +3,7 @@
 $nav-bar-label-height: 28px;
 $nav-bar-widget-container-height: 28px;
 $nav-bar-shim-height: 8px;
-$nav-bar-height: $nav-bar-label-height + $nav-bar-widget-container-height + $nav-bar-shim-height;
+$nav-bar-height: $nav-bar-label-height + (2 * $nav-bar-widget-container-height) + $nav-bar-shim-height;
 
 $nav-bar-widget-height: 24px;
 $chromosome-selector-widget-container-width: 160px;
@@ -136,7 +136,6 @@ $default-font-family: 'Open Sans', sans-serif;
     width: 100%;
 
     font-family: $default-font-family;
-    //font-size: 14px;
     font-weight: 400;
     color: $default-dark-color;
 
@@ -537,7 +536,6 @@ $default-font-family: 'Open Sans', sans-serif;
   font-family: $default-font-family;
 
   font-size: 14px;
-  //font-size: 12px;
 
   font-weight: 400;
 
@@ -562,6 +560,7 @@ $default-font-family: 'Open Sans', sans-serif;
       width: 95%;
       height: 100%;
 
+      font-size: 14px;
       font-weight: 700;
       text-overflow: ellipsis;
 
@@ -629,11 +628,10 @@ $default-font-family: 'Open Sans', sans-serif;
     flex-flow: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
 
     width: 100%;
     height: $nav-bar-widget-container-height;
-    background-color: transparent;
   }
 
   // nav-bar shim
@@ -662,7 +660,8 @@ $default-font-family: 'Open Sans', sans-serif;
 
 // navbar - chromosome goto
 .hic-chromosome-goto-container {
-  width: 360px;
+  width: 420px;
+  font-size: 16px;
   @include navbar-input;
 }
 
