@@ -129,6 +129,8 @@ $default-font-family: 'Open Sans', sans-serif;
   input {
     display: block;
 
+    cursor: pointer;
+
     margin-top:4px;
     height: 24px;
     width: 100%;
@@ -155,6 +157,8 @@ $default-font-family: 'Open Sans', sans-serif;
 
   input {
     display: block;
+
+    cursor: pointer;
 
     margin-top:4px;
     height: 24px;
@@ -541,7 +545,6 @@ $default-font-family: 'Open Sans', sans-serif;
   border-bottom-width: thin;
   border-bottom-color: transparent;
 
-
   // container: contact map label | browser delete button
   div[id$="hic-nav-bar-contact-map-label-delete-button-container"] {
     display:flex;
@@ -550,11 +553,12 @@ $default-font-family: 'Open Sans', sans-serif;
     align-items: flex-start;
 
     width: 100%;
+    height: $nav-bar-label-height;
 
     // nav-bar contact map label
     div[id$="hic-nav-bar-contact-map-label"] {
       width: 95%;
-      height: $nav-bar-label-height;
+      height: 100%;
 
       font-weight: 700;
       text-overflow: ellipsis;
@@ -673,11 +677,12 @@ $default-font-family: 'Open Sans', sans-serif;
 
   div {
     margin-top:4px;
-    padding-top: 2px;
-    height: 24px;
-    width: 80px;
+    margin-right: 6px;
 
-    //background-color: rgba(184, 250, 255, 0.5);
+    height: 24px;
+    width: 24px;
+
+    background-color: red;
   }
 
   @include navbar-color-scale-input;

@@ -38,13 +38,14 @@ var hic = (function (hic) {
         this.$container = $('<div class="hic-colorscale-widget-container">');
         $container.append(this.$container);
 
+        // colorScale chip
         $label = $('<div>');
         this.$container.append($label);
-        $label.text('Color Scale');
+        // $label.text('Color Scale');
 
+        // colorScale input
         this.$high_colorscale_input = $('<input type="text" placeholder="high">');
         this.$container.append(this.$high_colorscale_input);
-
         this.$high_colorscale_input.on('change', function(e){
 
             var value,
@@ -59,17 +60,7 @@ var hic = (function (hic) {
             }
         });
 
-        $fa = $("<i>", { class:'fa fa-plus', 'aria-hidden':'true' });
-        $fa.on('click', function (e) {
-            var value;
-
-            value = browser.getColorScale().high * 2.0;
-            self.$high_colorscale_input.val(value);
-            browser.updateColorScale( value );
-
-        });
-        this.$container.append($fa);
-
+        // -
         $fa = $("<i>", { class:'fa fa-minus', 'aria-hidden':'true' });
         $fa.on('click', function (e) {
             var value;
@@ -81,6 +72,17 @@ var hic = (function (hic) {
         });
         this.$container.append($fa);
 
+        // +
+        $fa = $("<i>", { class:'fa fa-plus', 'aria-hidden':'true' });
+        $fa.on('click', function (e) {
+            var value;
+
+            value = browser.getColorScale().high * 2.0;
+            self.$high_colorscale_input.val(value);
+            browser.updateColorScale( value );
+
+        });
+        this.$container.append($fa);
 
         this.browser.eventBus.subscribe("MapLoad", this);
         this.browser.eventBus.subscribe("ColorScale", this);
