@@ -11,13 +11,6 @@ var hic = (function (hic) {
 
         createAllContainers.call(this, browser, $root);
 
-        // $('html').on('click', function () {
-        //     if (browser.$menu.is(':visible')) {
-        //         browser.hideMenu();
-        //     }
-        // });
-
-
         this.scrollbar_height = 20;
         this.axis_height = 32;
 
@@ -44,7 +37,7 @@ var hic = (function (hic) {
             $fa;
 
         $navbar_container = $('<div class="hic-navbar-container">');
-
+        $root.append($navbar_container);
 
         $navbar_container.on('click', function (e) {
             e.stopPropagation();
@@ -52,11 +45,10 @@ var hic = (function (hic) {
             hic.Browser.setCurrentBrowser(browser);
         });
 
-        if(browser.config.showHicContactMapLabel === false) {
-            $navbar_container.height(hic.LayoutController.nav_bar_height);
-        }
+        // if(browser.config.showHicContactMapLabel === false) {
+        //     $navbar_container.height(hic.LayoutController.nav_bar_height);
+        // }
 
-        $root.append($navbar_container);
 
 
         // container: contact map label | browser delete button
@@ -69,9 +61,9 @@ var hic = (function (hic) {
         browser.$contactMaplabel = $("<div>", { id:id });
         $div.append(browser.$contactMaplabel);
 
-        if (false === browser.config.showHicContactMapLabel) {
-            browser.$contactMaplabel.hide();
-        }
+        // if (false === browser.config.showHicContactMapLabel) {
+        //     browser.$contactMaplabel.hide();
+        // }
 
         // menu button
         browser.$menuPresentDismiss = $("<div>", { class:'hic-nav-bar-menu-button' });
@@ -83,15 +75,6 @@ var hic = (function (hic) {
         $fa.on('click', function (e) {
             browser.toggleMenu();
         });
-
-        // hide menu
-        // $fa = $("<i>", { class:'fa fa-times fa-lg' });
-        // browser.$menuPresentDismiss.append($fa);
-        // $fa.on('click', function (e) {
-        //     browser.hideMenu();
-        // });
-        // $fa.hide();
-
 
         // delete button
         $e = $("<div>", { class:'hic-nav-bar-delete-button' });
@@ -133,7 +116,6 @@ var hic = (function (hic) {
         // if (false === browser.config.showLocusGoto) {
         //     browser.locusGoto.$container.hide();
         // }
-
 
         // lower widget container
         $div = $("<div>", { class:'hic-nav-bar-widget-container' });
@@ -185,14 +167,14 @@ var hic = (function (hic) {
         createMenu(browser, $root);
 
 
-        if(false === browser.config.showHicContactMapLabel) {
-            tokens = _.map([ hic.LayoutController.nav_bar_height ], function(number){
-                return number.toString() + 'px';
-            });
-            height_calc = 'calc(100% - (' + tokens.join(' + ') + '))';
-
-            this.$content_container.css( 'height', height_calc );
-        }
+        // if(false === browser.config.showHicContactMapLabel) {
+        //     tokens = _.map([ hic.LayoutController.nav_bar_height ], function(number){
+        //         return number.toString() + 'px';
+        //     });
+        //     height_calc = 'calc(100% - (' + tokens.join(' + ') + '))';
+        //
+        //     this.$content_container.css( 'height', height_calc );
+        // }
 
         // container: x-axis
         id = browser.id + '_' + 'x-axis-container';
