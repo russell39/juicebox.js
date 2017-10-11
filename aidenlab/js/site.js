@@ -180,7 +180,9 @@ var site = (function (site) {
 
                     emailContainer = $('#emailButtonContainer');
                     emailContainer.empty();
-                    emailContainer.append($('<a href="mailto:?body=' + shortURL + '">EMAIL</a>'));
+                    emailContainer.append($('<a id="emailButton" href="mailto:?body=' + shortURL + '">EMAIL</a>'));
+
+                // <a id="emailButton" href="mailto:?body=https://aidenlab.org/juicebox">EMAIL</a>
 
                     //<iframe src="" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 });
